@@ -1,0 +1,104 @@
+body {
+  background-color: #f8f8f8; 
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mentalcare-page {
+  padding: 20px;
+  max-height: 90vh; 
+  overflow-y: auto;
+  color: black;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: red; 
+}
+
+.intro, .service-description {
+  margin: 20px 0;
+  color: black; 
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: red;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.service-item svg {
+  margin-right: 10px;
+}
+
+.consultation-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: black; /* Set text color to black */
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: black; /* Ensure placeholder text is also black */
+}
+
+.submit-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: darkred;
+}

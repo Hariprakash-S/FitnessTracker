@@ -1,0 +1,53 @@
+.login-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.login-form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  width: 100%;
+  margin-right: 4rem;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.social-login {
+  margin-top: 1rem;
+}
+
+.sign-up-link {
+  margin-top: 1rem;
+  color: aqua;
+  text-align: center;
+}
+
+/* Remove border from TextField */
+.no-border {
+  border: none;
+}

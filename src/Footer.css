@@ -1,0 +1,85 @@
+/* Footer.css */
+.footer-container {
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 20px; /* Adjust padding for a smaller footer */
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout */
+    gap: 20px; /* Space between columns */
+    max-width: 1200px; /* Max width of the footer */
+    margin: 0 auto;
+  }
+  
+  .footer-about, .footer-links, .footer-contact, .footer-social {
+    margin: 0;
+  }
+  
+  .footer-about h2, .footer-contact h3, .footer-links h3, .footer-social h3 {
+    margin-bottom: 5px; /* Margin for headings */
+    font-size: 1.2em; /* Font size for headings */
+  }
+  
+  .footer-links {
+    grid-column: span 2; /* Span two columns */
+  }
+  
+  .footer-links h3 {
+    margin-bottom: 10px;
+  }
+  
+  .links-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between links */
+  }
+  
+  .links-list li {
+    margin: 0;
+  }
+  
+  .links-list li a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 0.9em; /* Font size for links */
+  }
+  
+  .links-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between icons */
+    margin-top: 10px;
+  }
+  
+  .footer-social h3 {
+    margin-bottom: 5px; /* Margin for headings */
+  }
+  
+  .footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em; /* Font size for icons */
+  }
+  
+  .footer-social a:hover {
+    color: #61dafb;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px; /* Margin for the bottom text */
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.8em; /* Font size for bottom text */
+  }
+  

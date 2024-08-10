@@ -1,0 +1,187 @@
+/* Container Styles */
+.progress-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 12px; /* Increased border-radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced box-shadow */
+  font-family: 'Arial, sans-serif';
+  color: #333;
+}
+
+/* Title Styles */
+.progress-title {
+  text-align: center;
+  color: #222; /* Slightly darker title color */
+  margin-bottom: 20px;
+  font-size: 2.2rem; /* Increased font size */
+  font-weight: bold;
+}
+
+/* Form Styles */
+.input-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin-bottom for more spacing */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px; /* Increased margin-bottom */
+  font-weight: bold;
+  color: #444; /* Darker label color */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Increased border-radius */
+  font-size: 1rem;
+  background-color: #fafafa; /* Light background color */
+}
+
+.calculate-button {
+  display: block;
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  background-color: #ff4b4b; /* Brighter red */
+  color: #fff;
+  border: none;
+  border-radius: 6px; /* Increased border-radius */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.calculate-button:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px); /* Button lift effect */
+}
+
+/* Charts Container Styles */
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.chart {
+  flex: 1;
+  min-width: 0;
+}
+
+.chart h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.6rem; /* Slightly increased font size */
+  font-weight: bold;
+}
+
+/* Results Styles */
+.results {
+  margin-top: 20px;
+  padding: 25px; /* Increased padding */
+  background-color: #fff;
+  border-radius: 12px; /* Increased border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced box-shadow */
+}
+
+.results h3 {
+  color: #222; /* Darker heading color */
+  margin-bottom: 12px; /* Slightly increased margin-bottom */
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.results p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Summary and Goals Styles */
+.summary, .goals {
+  margin-top: 30px;
+  padding: 25px; /* Increased padding */
+  background-color: #fff;
+  border-radius: 12px; /* Increased border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced box-shadow */
+}
+
+.summary h3, .goals h3 {
+  color: #222;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.summary p {
+  color: #555;
+}
+
+.summary ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.summary ul li {
+  color: #555;
+}
+
+.goals .goal-item {
+  margin-bottom: 18px; /* Increased margin-bottom */
+}
+
+.goals .goal-item span {
+  display: block;
+  margin-bottom: 6px; /* Slightly increased margin-bottom */
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 6px; /* Increased border-radius */
+  overflow: hidden;
+}
+
+.progress {
+  height: 12px; /* Slightly increased height */
+  background-color: #ff4b4b;
+  border-radius: 6px; /* Increased border-radius */
+  transition: width 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .charts-container {
+    flex-direction: column;
+  }
+
+  .chart {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-container {
+    padding: 15px; /* Increased padding */
+  }
+
+  .progress-title {
+    font-size: 1.7rem; /* Slightly increased font size */
+  }
+
+  .results, .input-form, .summary, .goals {
+    padding: 20px; /* Increased padding */
+  }
+
+  .results h3, .summary h3, .goals h3 {
+    font-size: 1.4rem; /* Slightly increased font size */
+  }
+}

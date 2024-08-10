@@ -1,0 +1,92 @@
+/* Home.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; /* Ensure vertical scrolling */
+}
+
+.home-container {
+  min-height: 100vh;
+  background: url('https://i.pinimg.com/564x/2d/94/de/2d94de7ef202ecd838a1cefa580735ff.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.text-container {
+  text-align: left;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff0000;
+}
+
+.quote {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+.fitness-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.explore-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: darkred;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.carousel-text {
+  font-size: 2rem;
+  color: white; /* Set text color to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: transparent; /* Set background to transparent */
+  border-radius: 10px;
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.5); /* Adjust legend background for contrast */
+  color: white; /* Set text color to white */
+  padding: 10px;
+  border-radius: 5px;
+}

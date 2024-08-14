@@ -1,0 +1,89 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevents content overflow from affecting the layout */
+  }
+  
+  .sidebar {
+    width: 250px; /* Set the width of the sidebar */
+    background-color: #2c3e50; /* Sidebar background color */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if sidebar content overflows */
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+  }
+  
+  .dashboard-content .MuiTypography-h4 {
+    margin-bottom: 20px;
+  }
+  
+  .MuiGrid-item {
+    padding: 10px;
+  }
+  
+  .MuiCard {
+    margin: 10px 0;
+  }
+  
+  .MuiCardContent {
+    padding: 20px;
+  }
+  
+  .MuiTextField {
+    margin: 10px 0;
+  }
+  
+  .MuiButton {
+    margin-top: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .add-workout-form {
+    margin-top: 20px;
+  }
+  
+  .add-workout-form .MuiTextField {
+    margin: 10px 0;
+  }
+  
+  .add-workout-form .MuiButton {
+    margin-top: 20px;
+  }
+  
+  .workout-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .workout-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .workout-card .MuiTypography-h6 {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,43 @@
+.dashboard-container {
+  display: flex;
+}
+
+.users-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.users-form {
+  margin-bottom: 40px;
+}
+
+.users-list-container {
+  margin-top: 20px;
+}
+
+.users-list {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.users-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.users-list-item:last-child {
+  border-bottom: none;
+}
+
+.icon-buttons .MuiIconButton-root {
+  color: #000000;
+}

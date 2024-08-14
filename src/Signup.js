@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { TextField, Button, Checkbox, FormControlLabel, IconButton, InputAdornment, FormHelperText, Grid, Link } from '@mui/material';
-import { AccountCircle, Visibility, VisibilityOff, Google as GoogleIcon, Facebook as FacebookIcon } from '@mui/icons-material';
+import { TextField, Button, Checkbox, FormControlLabel, FormHelperText, Grid, Link } from '@mui/material';
+import { Google as GoogleIcon, Facebook as FacebookIcon } from '@mui/icons-material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Signup.css';
@@ -15,7 +15,6 @@ const SignUpPage = () => {
     termsAccepted: false,
   });
 
-  const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({
     usernameError: '',
     emailError: '',
@@ -30,10 +29,6 @@ const SignUpPage = () => {
       ...formData,
       [name]: type === 'checkbox' ? checked : value,
     });
-  };
-
-  const handleClickShowPassword = () => {
-    setShowPassword(!showPassword);
   };
 
   const handleSubmit = async (e) => {
@@ -106,13 +101,6 @@ const SignUpPage = () => {
               onChange={handleChange}
               error={!!errors.usernameError}
               helperText={errors.usernameError}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                ),
-              }}
               fullWidth
               required
             />
@@ -126,13 +114,6 @@ const SignUpPage = () => {
               onChange={handleChange}
               error={!!errors.emailError}
               helperText={errors.emailError}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                ),
-              }}
               fullWidth
               required
             />
@@ -140,25 +121,12 @@ const SignUpPage = () => {
           <div className="form-group">
             <TextField
               label="Password"
-              type={showPassword ? 'text' : 'password'}
+              type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
               error={!!errors.passwordError}
               helperText={errors.passwordError}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      edge="end"
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
               fullWidth
               required
             />
@@ -166,25 +134,12 @@ const SignUpPage = () => {
           <div className="form-group">
             <TextField
               label="Confirm Password"
-              type={showPassword ? 'text' : 'password'}
+              type="password"
               name="confirmpassword"
               value={formData.confirmpassword}
               onChange={handleChange}
               error={!!errors.confirmPasswordError}
               helperText={errors.confirmPasswordError}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      edge="end"
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
               fullWidth
               required
             />

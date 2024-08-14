@@ -4,7 +4,8 @@ import DashboardIcon from '@mui/icons-material/Dashboard'; // Dashboard icon
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'; // Workouts icon
 import PsychologyIcon from '@mui/icons-material/Psychology'; // Mental Care icon
 import RestaurantIcon from '@mui/icons-material/Restaurant'; // Diet Plan icon
-import BarChartIcon from '@mui/icons-material/BarChart'; // Analytics icon
+import PeopleIcon from '@mui/icons-material/People'; // Users icon
+import LogoutIcon from '@mui/icons-material/Logout'; // Logout icon
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -37,9 +38,15 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="sidebar-item">
-          <Link to="/admin/Analytics" className="sidebar-link">
-            <BarChartIcon className="sidebar-icon" />
-            Analytics
+          <Link to="/admin/analytics" className="sidebar-link">
+            <PeopleIcon className="sidebar-icon" />
+            Users
+          </Link>
+        </li>
+        <li className="sidebar-item">
+          <Link to="/login" className="sidebar-link">
+            <LogoutIcon className="sidebar-icon" />
+            Logout
           </Link>
         </li>
       </ul>
@@ -48,3 +55,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+

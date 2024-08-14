@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Checkbox, FormControlLabel, FormHelperText, Grid } from '@mui/material';
 import { Google as GoogleIcon, Facebook as FacebookIcon } from '@mui/icons-material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const LoginPage = () => {
@@ -10,13 +10,13 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [errors, setErrors] = useState({ email: '', password: '', terms: '' });
-  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let valid = true;
     let tempErrors = { email: '', password: '', terms: '' };
 
+    // Validate form inputs
     if (!email) {
       tempErrors.email = 'Email is required';
       valid = false;
@@ -34,15 +34,33 @@ const LoginPage = () => {
 
     setErrors(tempErrors);
 
+    // Proceed if form is valid
     if (valid) {
-      console.log('Form Submitted:', { email, password, termsAccepted });
+      try {
+        // Send login request to the backend
+        const response = await fetch('http://localhost:9001/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
 
-      if (email === 'admin@example.com' && password === 'admin') {
-        localStorage.setItem('userRole', 'admin');
-        navigate('/admin-dashboard');
-      } else {
-        localStorage.setItem('userRole', 'user');
-        navigate('/');
+        if (response.ok) {
+          const user = await response.json();
+          localStorage.setItem('userName', user.username); // Save the user's name in local storage
+
+          // Check user role and redirect accordingly
+          if (user.email === 'adminpass@gmail.com') {
+            window.location.href = '/admin-dashboard'; // Redirect to admin dashboard
+          } else {
+            window.location.href = '/'; // Redirect to home page for non-admin users
+          }
+        } else {
+          console.error('Login failed:', await response.text());
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
       }
     }
   };

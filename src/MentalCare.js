@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './MentalCare.css';
 import PersonIcon from '@mui/icons-material/Person';
 import GroupIcon from '@mui/icons-material/Group';
@@ -19,6 +20,8 @@ function MentalCare() {
     message: ''
   });
 
+  const [statusMessage, setStatusMessage] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -27,9 +30,20 @@ function MentalCare() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const response = await axios.post('http://localhost:9001/mentalcare/submit', formData);
+      setStatusMessage('Your message has been submitted successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      setStatusMessage('There was an error submitting your message. Please try again later.');
+      console.error('There was an error!', error);
+    }
   };
 
   return (
@@ -73,6 +87,7 @@ function MentalCare() {
         </div>
         <button type="submit" className="submit-button">Submit</button>
       </form>
+      {statusMessage && <p className="status-message">{statusMessage}</p>}
       
       <h2 className="subtitle">Our Mental Care Services</h2>
       <p className="service-description">We offer a variety of services to help you manage stress, improve mental clarity, and achieve a balanced state of mind.</p>

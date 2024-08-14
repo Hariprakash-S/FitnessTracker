@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,600,700);
+
+
+.workout-men-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 20px; /* Space between grid items */
+    padding: 20px 20px 20px 0px; /* Reduced left padding */
+    max-height: 100vh; /* Set a maximum height for the container */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #000; /* Black background for the page */
+}
+
+  
+.snip1527 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  background: #000; /* Ensure background color for visibility */
+  width: 100%; /* Ensure cards take full width of the grid cell */
+}
+
+.snip1527 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.snip1527 img {
+    display: block;
+    width: 100%;
+    height: 300px; /* Adjust this value as needed */
+    object-fit: cover; /* Ensure images cover the fixed height */
+    vertical-align: top;
+  }
+  
+
+.snip1527 figcaption {
+  padding: 15px; /* Adjust padding for better fit */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Slightly opaque background for better readability */
+  color: #fff;
+}
+
+.snip1527 figcaption h3 {
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin: 0 0 10px;
+}
+
+.snip1527 figcaption p {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  margin: 0;
+}
+
+.snip1527 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+}
+
+.snip1527:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

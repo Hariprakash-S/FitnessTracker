@@ -1,21 +1,15 @@
-// MentalCareDashboard.js
 import React, { useEffect, useState } from 'react';
 import { Container, Table, TableBody, TableCell, TableHead, TableRow, Typography, Paper } from '@mui/material';
-import Sidebar from './Sidebar'; 
-
-
-const mockData = [
-  { id: 1, name: 'John Doe', email: 'john@example.com', message: 'Need help with stress management.' },
-  { id: 2, name: 'Jane Smith', email: 'jane@example.com', message: 'Looking for meditation tips.' },
-  { id: 3, name: 'Bob Johnson', email: 'bob@example.com', message: 'Interested in mental wellness programs.' },
-];
+import Sidebar from './Sidebar';
 
 const MentalCareDashboard = () => {
   const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
-    // Simulating data fetch
-    setCustomers(mockData);
+    fetch('http://localhost:9001/mentalcare/all')
+      .then(response => response.json())
+      .then(data => setCustomers(data))
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   return (
